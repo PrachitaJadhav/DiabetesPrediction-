@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Prediction</title>
+</head>
+<body>
+    <h2>Enter Patient Details</h2>
+    <form action="/predict" method="post">
+        <input type="text" name="age" placeholder="Age" required>
+        <input type="text" name="blood_glucose_level" placeholder="Blood Glucose Level" required>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
